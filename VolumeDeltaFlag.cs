@@ -49,11 +49,12 @@ namespace NinjaTrader.NinjaScript.Indicators
 			if (State == State.SetDefaults)
 			{
 				Calculate					= Calculate.OnBarClose;
-				Description					= NinjaTrader.Custom.Resource.NinjaScriptIndicatorDescriptionVolumeUpDown;
+				Description					= @"Sums consecutive volume bars creating volume flags. Subtracts Bull volume flags from Bear volume flags to display Volume imbalance.";
+				Name						= "Volume Delta Flags";
 				DrawOnPricePanel			= false;
 				IsOverlay					= false;
 				IsSuspendedWhileInactive	= true;
-				Name						= "VolumeDeltaFlag";
+				
 
 				AddPlot(new Stroke(Brushes.DarkCyan, 2), PlotStyle.Bar, NinjaTrader.Custom.Resource.VolumeUp);
 				AddPlot(new Stroke(Brushes.Crimson, 2), PlotStyle.Bar, NinjaTrader.Custom.Resource.VolumeDown);
